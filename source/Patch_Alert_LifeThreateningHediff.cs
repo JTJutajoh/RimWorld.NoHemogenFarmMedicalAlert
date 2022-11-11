@@ -14,12 +14,26 @@ namespace NoHemogenFarmMedicalAlert
     {
         static void Postfix(ref List<Pawn> __result)
         {
+            if (__result.Count <= 0)
+                return;
+
             List<Pawn> tmpList = __result.ListFullCopy();
             for (int i = 0; i < __result.Count; i++)
             {
-                if (__result[i].guest is Pawn_GuestTracker guestTracker && guestTracker.interactionMode == PrisonerInteractionModeDefOf.HemogenFarm)
+                Pawn pawn = __result[i];
+                if (pawn.guest is Pawn_GuestTracker guestTracker && guestTracker.interactionMode == PrisonerInteractionModeDefOf.HemogenFarm)
                 {
-                    tmpList.Remove(__result[i]);  
+                    bool hasLifeThreateningHediffNotBloodLoss = false;
+                    for (int j = 0; j < pawn.health.hediffSet.hediffs.Count; j++)
+                    {
+                        Hediff hediff = pawn.health.hediffSet.hediffs[j];
+                        if (hediff.CurStage != null && hediff.CurStage.lifeThreatening && !hediff.FullyImmune() && hediff.def != HediffDefOf.BloodLoss)
+                        {
+                            hasLifeThreateningHediffNotBloodLoss = true;
+                        }
+                    }
+                    if (!hasLifeThreateningHediffNotBloodLoss)
+                        tmpList.Remove(__result[i]);  
                 }
             }
             __result = tmpList;

@@ -8,14 +8,6 @@ using HarmonyLib;
 
 namespace NoHemogenFarmMedicalAlert
 {
-    public class HemoganFarmAlertMod : Verse.Mod
-    {
-        public HemoganFarmAlertMod(ModContentPack content) : base(content)
-        {
-            //Get settings
-        }
-    }
-
     [StaticConstructorOnStartup]
     static class LoadHarmony
     {
