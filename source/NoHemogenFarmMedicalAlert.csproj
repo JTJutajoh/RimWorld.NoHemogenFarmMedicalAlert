@@ -53,7 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HemoganFarmAlertMod.cs" />
+    <Compile Include="HemogenFarmAlertMod.cs" />
     <Compile Include="Patch_Alert_LifeThreateningHediff.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

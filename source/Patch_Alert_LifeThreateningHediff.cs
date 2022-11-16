@@ -21,7 +21,7 @@ namespace NoHemogenFarmMedicalAlert
             for (int i = 0; i < __result.Count; i++)
             {
                 Pawn pawn = __result[i];
-                if (pawn.guest is Pawn_GuestTracker guestTracker && guestTracker.interactionMode == PrisonerInteractionModeDefOf.HemogenFarm)
+                if (pawn.guest is Pawn_GuestTracker guestTracker && (guestTracker.interactionMode == PrisonerInteractionModeDefOf.HemogenFarm || guestTracker.interactionMode == PrisonerInteractionModeDefOf.Bloodfeed))
                 {
                     bool hasLifeThreateningHediffNotBloodLoss = false;
                     for (int j = 0; j < pawn.health.hediffSet.hediffs.Count; j++)

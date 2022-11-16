@@ -3,3 +3,4 @@ E:\GameDev\Modding\Dark.RimWorldMods\NoHemogenFarmMedicalAlert\source\Assemblies
 E:\GameDev\Modding\Dark.RimWorldMods\NoHemogenFarmMedicalAlert\source\Assemblies\NoHemogenFarmMedicalAlert.pdb
 E:\GameDev\Modding\Dark.RimWorldMods\NoHemogenFarmMedicalAlert\source\obj\Debug\NoHemogenFarmMedicalAlert.dll
 E:\GameDev\Modding\Dark.RimWorldMods\NoHemogenFarmMedicalAlert\source\obj\Debug\NoHemogenFarmMedicalAlert.pdb
+E:\GameDev\Modding\Dark.RimWorldMods\NoHemogenFarmMedicalAlert\source\obj\Debug\NoHemogenFarmMedicalAlert.csproj.AssemblyReference.cache
