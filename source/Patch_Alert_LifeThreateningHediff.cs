@@ -17,26 +17,39 @@ namespace NoHemogenFarmMedicalAlert
             if (__result.Count <= 0)
                 return;
 
-            List<Pawn> tmpList = __result.ListFullCopy();
+            List<Pawn> tmpList = null;
             for (int i = 0; i < __result.Count; i++)
             {
                 Pawn pawn = __result[i];
                 if (pawn.guest is Pawn_GuestTracker guestTracker && (guestTracker.interactionMode == PrisonerInteractionModeDefOf.HemogenFarm || guestTracker.interactionMode == PrisonerInteractionModeDefOf.Bloodfeed))
                 {
-                    bool hasLifeThreateningHediffNotBloodLoss = false;
+                    bool hasOtherLifeThreateningHediff = false;
                     for (int j = 0; j < pawn.health.hediffSet.hediffs.Count; j++)
                     {
                         Hediff hediff = pawn.health.hediffSet.hediffs[j];
-                        if (hediff.CurStage != null && hediff.CurStage.lifeThreatening && !hediff.FullyImmune() && hediff.def != HediffDefOf.BloodLoss)
-                        {
-                            hasLifeThreateningHediffNotBloodLoss = true;
-                        }
+                        if (hediff.CurStage == null || !hediff.CurStage.lifeThreatening || hediff.FullyImmune())
+                            continue;
+
+                        if (hediff.def == HediffDefOf.BloodLoss)
+                            continue;
+
+                        if (hediff.def == HediffDefOf.GeneticDrugNeed && hediff.Severity < 11.0) // 0.2 per day
+                            continue;
+
+                        hasOtherLifeThreateningHediff = true;
+                        break;
                     }
-                    if (!hasLifeThreateningHediffNotBloodLoss)
+                    if (!hasOtherLifeThreateningHediff)
+                    {
+                        if (tmpList == null)
+                            tmpList = __result.ListFullCopy();
                         tmpList.Remove(__result[i]);  
+                    }
                 }
             }
-            __result = tmpList;
+            
+            if (tmpList != null)
+                __result = tmpList;
         }
     }
 }
