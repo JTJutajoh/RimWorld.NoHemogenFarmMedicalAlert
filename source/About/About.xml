@@ -5,6 +5,7 @@
 	<author>DarkFlame7</author>
 	<supportedVersions>
     <li>1.4</li>
+    <li>1.5</li>
   </supportedVersions>
   <description>Patches the "Medical Emergency" alert to ignore extreme blood loss on prisoners that are set to the "Hemogen Farm" interaction mode.
   
