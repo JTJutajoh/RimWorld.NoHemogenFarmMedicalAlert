@@ -5,12 +5,28 @@
 	<author>DarkFlame7</author>
 	<supportedVersions>
     <li>1.4</li>
+    <li>1.5</li>
   </supportedVersions>
-  <description>Patches the "Medical Emergency" alert to ignore extreme blood loss on prisoners that are set to the "Hemogen Farm" interaction mode.
-  
-Hemogen Farm prisoners are always suffering from blood loss, and so the alert barely ever goes away in vanilla if you have more than a couple.
+  <description>
+    Patches the "Medical Emergency" alert to ignore extreme blood loss on prisoners that are set to the "Hemogen Farm" or "Bloodfeed" interaction modes.
 
-Other life-threatening health conditions still trigger the alert.</description>
+    Hemogen Farm prisoners are always suffering from blood loss, that's the point, so the alert that they have a life-threatening medical condition barely ever goes away in vanilla if you have more than a couple hemogen farm prisoners.
+
+    Other life-threatening health conditions still trigger the alert.
+
+    ## Performance
+    Likely has a *small* negative impact on performance (especially in RimWorld 1.5) since it has to check the prisoner's interaction mode every time. It should be fairly negligible but having many prisoners at once may make it noticeable (emphasis on *many* prisoners, though).
+    _Thanks to zed-0xff on GitHub for a pull request that helped optimize the performance better than I was initially able to._
+
+    ## Compatibility
+    - **Safe to add or remove from an ongoing save**
+    - It's just one simple harmony patch, so it really shouldn't conflict with anything at all. Let me know if you find an incompatibility.
+
+    ## Known issues
+    - If you arrest a colonist who already has life-threatening blood loss, it will still display the alert once they are a prisoner. Not enough of a problem for me to bother fixing it (If you want to take a crack at it go ahead and submit a pull request on GitHub).
+
+    ### Source
+    [Source code on GitHub](https://github.com/JTJutajoh/RimWorld.NoHemogenFarmMedicalAlert). You have my permission to update this mod in the future if RimWorld updates break it and I don't fix it myself.</description>
   <modDependencies>
     <li>
       <packageId>ludeon.rimworld.biotech</packageId>
