@@ -25,7 +25,7 @@ namespace NoHemogenFarmMedicalAlert
                 if (pawn.guest is Pawn_GuestTracker guestTracker && (guestTracker.interactionMode == PrisonerInteractionModeDefOf.HemogenFarm || guestTracker.interactionMode == PrisonerInteractionModeDefOf.Bloodfeed))
 #endif
 #if v1_5
-                if (pawn.guest is Pawn_GuestTracker guestTracker && (guestTracker.IsInteractionEnabled(PrisonerInteractionModeDefOf.HemogenFarm) || guestTracker.IsInteractionEnabled(PrisonerInteractionModeDefOf.Bloodfeed)))
+                if (pawn.guest is Pawn_GuestTracker guestTracker && guestTracker.IsPrisoner && (guestTracker.IsInteractionEnabled(PrisonerInteractionModeDefOf.HemogenFarm) || guestTracker.IsInteractionEnabled(PrisonerInteractionModeDefOf.Bloodfeed)))
 #endif
                 {
                     bool hasOtherLifeThreateningHediff = false;
