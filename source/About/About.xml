@@ -2,10 +2,11 @@
 <ModMetaData>
 	<packageId>Dark.NoHemogenFarmMedicalAlert</packageId>
 	<name>No Hemogen Farm Medical Alert</name>
-	<author>DarkFlame7</author>
+	<author>Dark</author>
 	<supportedVersions>
     <li>1.4</li>
     <li>1.5</li>
+    <li>1.6</li>
   </supportedVersions>
   <description>
     Patches the "Medical Emergency" alert to ignore extreme blood loss on prisoners that are set to the "Hemogen Farm" or "Bloodfeed" interaction modes.
@@ -15,7 +16,7 @@
     Other life-threatening health conditions still trigger the alert.
 
     ## Performance
-    Likely has a *small* negative impact on performance (especially in RimWorld 1.5) since it has to check the prisoner's interaction mode every time. It should be fairly negligible but having many prisoners at once may make it noticeable (emphasis on *many* prisoners, though).
+    Likely has a *small* negative impact on performance (especially in RimWorld 1.5+) since it has to check the prisoner's interaction mode every time. It should be fairly negligible but having many prisoners at once may make it noticeable (emphasis on *many* prisoners, though).
     _Thanks to zed-0xff on GitHub for a pull request that helped optimize the performance better than I was initially able to._
 
     ## Compatibility
