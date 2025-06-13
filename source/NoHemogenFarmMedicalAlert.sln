@@ -10,8 +10,10 @@ Global
 		1.1|Any CPU = 1.1|Any CPU
 		1.4|Any CPU = 1.4|Any CPU
 		1.5|Any CPU = 1.5|Any CPU
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
+		1.6|Any CPU = 1.6|Any CPU
+		1.6 Debug|Any CPU = 1.6 Debug|Any CPU
+		1.2|Any CPU = 1.2|Any CPU
+		1.3|Any CPU = 1.3|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{0727AC1D-6DC3-44A7-9706-850320A6D38F}.1.1|Any CPU.ActiveCfg = 1.1|Any CPU
@@ -20,10 +22,14 @@ Global
 		{0727AC1D-6DC3-44A7-9706-850320A6D38F}.1.4|Any CPU.Build.0 = 1.4|Any CPU
 		{0727AC1D-6DC3-44A7-9706-850320A6D38F}.1.5|Any CPU.ActiveCfg = 1.5|Any CPU
 		{0727AC1D-6DC3-44A7-9706-850320A6D38F}.1.5|Any CPU.Build.0 = 1.5|Any CPU
-		{0727AC1D-6DC3-44A7-9706-850320A6D38F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0727AC1D-6DC3-44A7-9706-850320A6D38F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0727AC1D-6DC3-44A7-9706-850320A6D38F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0727AC1D-6DC3-44A7-9706-850320A6D38F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0727AC1D-6DC3-44A7-9706-850320A6D38F}.1.6|Any CPU.ActiveCfg = 1.6|Any CPU
+		{0727AC1D-6DC3-44A7-9706-850320A6D38F}.1.6|Any CPU.Build.0 = 1.6|Any CPU
+		{0727AC1D-6DC3-44A7-9706-850320A6D38F}.1.6 Debug|Any CPU.ActiveCfg = 1.6 Debug|Any CPU
+		{0727AC1D-6DC3-44A7-9706-850320A6D38F}.1.6 Debug|Any CPU.Build.0 = 1.6 Debug|Any CPU
+		{0727AC1D-6DC3-44A7-9706-850320A6D38F}.1.2|Any CPU.ActiveCfg = 1.2|Any CPU
+		{0727AC1D-6DC3-44A7-9706-850320A6D38F}.1.2|Any CPU.Build.0 = 1.2|Any CPU
+		{0727AC1D-6DC3-44A7-9706-850320A6D38F}.1.3|Any CPU.ActiveCfg = 1.3|Any CPU
+		{0727AC1D-6DC3-44A7-9706-850320A6D38F}.1.3|Any CPU.Build.0 = 1.3|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
